@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: edwingomespipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edwingomespipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: edwingomespipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: edwingomespipelinesjavascriptdocker 
+          image: terraformacrdev.azurecr.io/edwingomespipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
